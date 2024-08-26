@@ -18,9 +18,14 @@ namespace learning
         }
 
         // Method to log a message
-        public void Print(string message)
+        public void PrintInformation(string message)
         {
             _log.Information(message);
+        }
+        // Method to log a message
+        public void PrintError(string message)
+        {
+            _log.Error(message);
         }
     }
 

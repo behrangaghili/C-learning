@@ -96,10 +96,10 @@ namespace learning
             var logger = new Logger();
 
             //12 Log a message using the Print method
-            logger.Print("This is an informational message.");
+            logger.PrintInformation("This is an informational message.");
 
             //12 Log another message
-            logger.Print("Another log entry demonstrating Serilog usage.");
+            logger.PrintError("This is an error message.");
 
             //12 Wait for user input before closing the console window
             Console.ReadLine();

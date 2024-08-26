@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28729.10
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning", "csharo_learning\learning.csproj", "{2921B2C1-FEED-42E0-AD59-62E3C29DC908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "learning", "Learning\learning.csproj", "{76CB65B2-DDC5-4AD7-A6E1-8340B5620092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2921B2C1-FEED-42E0-AD59-62E3C29DC908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2921B2C1-FEED-42E0-AD59-62E3C29DC908}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2921B2C1-FEED-42E0-AD59-62E3C29DC908}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2921B2C1-FEED-42E0-AD59-62E3C29DC908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76CB65B2-DDC5-4AD7-A6E1-8340B5620092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76CB65B2-DDC5-4AD7-A6E1-8340B5620092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76CB65B2-DDC5-4AD7-A6E1-8340B5620092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76CB65B2-DDC5-4AD7-A6E1-8340B5620092}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

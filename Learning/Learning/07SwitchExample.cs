@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace learning
 {
-    class SwitchDefult
+    class SwitchExample
     {
-        public static void SwitchDefultMethod()
+        public static void SwitchExampleMethod()
         {
             // Display the options to the user
             Console.WriteLine("Please select an option:");
@@ -18,20 +14,21 @@ namespace learning
             Console.WriteLine("4 - Technology");
             Console.WriteLine("5 - Art");
 
-            // Read the selected option from the user
+            int num;
 
-            // Loop until a valid integer is entered
-            int num = Convert.ToInt32(Console.ReadLine());
+            // Loop until a valid integer between 1 and 5 is entered
             while (true)
             {
-                Console.Write("Please enter a number corresponding to an option: ");
+                Console.Write("Please enter a number corresponding to an option (1-5): ");
                 string input = Console.ReadLine();
 
+                // Try to parse the input into an integer and check if it's within the valid range
                 if (int.TryParse(input, out num) && num >= 1 && num <= 5)
                 {
                     break; // Exit the loop if a valid number is entered
                 }
 
+                // Inform the user of the invalid entry
                 Console.WriteLine("Invalid entry! Please enter a number between 1 and 5.");
             }
 
@@ -39,25 +36,26 @@ namespace learning
             switch (num)
             {
                 case 1:
-                    Console.WriteLine("Sports");
+                    Console.WriteLine("You selected Sports.");
                     break;
                 case 2:
-                    Console.WriteLine("Politics");
+                    Console.WriteLine("You selected Politics.");
                     break;
                 case 3:
-                    Console.WriteLine("Business");
+                    Console.WriteLine("You selected Business.");
                     break;
                 case 4:
-                    Console.WriteLine("Technology");
+                    Console.WriteLine("You selected Technology.");
                     break;
                 case 5:
-                    Console.WriteLine("Art");
+                    Console.WriteLine("You selected Art.");
                     break;
                 default:
-                    // If the user enters a number that's not an option, print a message indicating that it's not an option
+                    // The default case should never be reached due to validation, but it's good practice to include it
                     Console.WriteLine("Not An Option");
                     break;
             }
         }
     }
+
 }

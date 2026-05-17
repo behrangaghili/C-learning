@@ -60,7 +60,7 @@ namespace learning
 
                 // Sleep gives Thread 2 time to lock SecondLock.
                 // This makes the deadlock easier to reproduce for the lesson.
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
 
                 Console.WriteLine("Thread 1 is waiting for SecondLock.");
                 lock (SecondLock)
@@ -78,7 +78,7 @@ namespace learning
 
                 // Sleep gives Thread 1 time to lock FirstLock.
                 // Now both threads own one lock and wait for the other lock.
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
 
                 Console.WriteLine("Thread 2 is waiting for FirstLock.");
                 lock (FirstLock)
@@ -97,7 +97,7 @@ namespace learning
             lock (SafeFirstLock)
             {
                 Console.WriteLine("Safe task locked SafeFirstLock.");
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
 
                 lock (SafeSecondLock)
                 {

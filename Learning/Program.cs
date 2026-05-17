@@ -37,6 +37,8 @@ namespace learning
             {
                 Console.WriteLine("No command-line arguments provided.");
             }
+
+            /*
             //00PartialClass
             Greeting greeting = new Greeting();
             greeting.PrintHello();
@@ -101,7 +103,19 @@ namespace learning
             //12 Log another message
             logger.PrintError("This is an error message.");
 
-            //12 Wait for user input before closing the console window
+            //13 Call the DemonstrateMemoryLeak method to show how memory can leak
+            MemoryLeakExample.DemonstrateMemoryLeak();
+            */
+            //13 Call the FixMemoryLeak method to show how releasing references fixes the issue
+            MemoryLeakExample.FixMemoryLeak();
+
+            //14 Call the DemonstrateDeadlock method to explain how deadlock happens
+            DeadlockExample.DemonstrateDeadlock();
+
+            //14 Call the DemonstrateDeadlockPrevention method to explain how to avoid this deadlock
+            DeadlockExample.DemonstrateDeadlockPrevention();
+
+            //14 Wait for user input before closing the console window
             Console.ReadLine();
         }
     }

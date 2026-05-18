@@ -10,6 +10,7 @@ namespace learning
         private static readonly object SecondLock = new object();
         private static readonly object SafeFirstLock = new object();
         private static readonly object SafeSecondLock = new object();
+        
 
         // Method to explain and safely demonstrate the deadlock concept
         public static void DemonstrateDeadlock()
@@ -22,11 +23,13 @@ namespace learning
 
             Task threadOne = Task.Run(ThreadOneWork);
             Task threadTwo = Task.Run(ThreadTwoWork);
-
+            Console.WriteLine("Thread one status: " + threadOne.Status);
+            Console.WriteLine("Thread two status: " + threadTwo.Status);
             // We use a timeout so this lesson does not freeze the whole program forever.
             // In a real deadlock, WaitAll without a timeout would never finish.
             bool finished = Task.WaitAll(new[] { threadOne, threadTwo }, 10000);
-
+            Console.WriteLine("Thread one status: " + threadOne.Status);
+            Console.WriteLine("Thread two status: " + threadTwo.Status);
             if (!finished)
             {
                 Console.WriteLine("Deadlock detected: the tasks did not finish within the timeout.");
@@ -45,8 +48,12 @@ namespace learning
 
             Task threadOne = Task.Run(SafeThreadWork);
             Task threadTwo = Task.Run(SafeThreadWork);
+            Console.WriteLine("Thread one status: " + threadOne.Status);
+            Console.WriteLine("Thread two status: " + threadTwo.Status);
 
-            Task.WaitAll(threadOne, threadTwo);
+             Task.WaitAll(threadOne, threadTwo);
+            Console.WriteLine("Thread one status: " + threadOne.Status);
+            Console.WriteLine("Thread two status: " + threadTwo.Status);
 
             Console.WriteLine("Both tasks finished because they asked for the locks in the same order.");
             Console.WriteLine(); // Add a blank line for clarity

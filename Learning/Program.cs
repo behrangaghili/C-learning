@@ -115,7 +115,13 @@ namespace learning
             //14 Call the DemonstrateDeadlockPrevention method to explain how to avoid this deadlock
             DeadlockExample.DemonstrateDeadlockPrevention();
 
-            //14 Wait for user input before closing the console window
+            //15 Call the DemonstrateRefAndOut method to explain ref and out parameters
+            RefAndOutExample.DemonstrateRefAndOut();
+
+            //16 Call the DemonstrateConcurrency method to explain race conditions and thread locks
+            ConcurrencyExample.DemonstrateConcurrency();
+
+            //16 Wait for user input before closing the console window
             Console.ReadLine();
         }
     }
